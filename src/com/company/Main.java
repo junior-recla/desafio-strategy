@@ -11,7 +11,7 @@ public class Main {
         Pessoa carlos = new Pessoa("Carlos", () -> System.out.println("Estou falando Português!") );
         Pessoa eduardo = new Pessoa("Eduardo", () -> System.out.println("Parlo italiano!"));
         Pessoa camila = new Pessoa("Camila", () -> System.out.println("I am speaking English!"));
-        Pessoa gabriel = new Pessoa("Grabriel", () -> System.out.println("Estoy hablando español!"));
+        Pessoa gabriel = new Pessoa("Gabriel", () -> System.out.println("Estoy hablando español!"));
         Pessoa outro = new Pessoa("Outro", () -> System.out.println("Estou falando outra lingua quaquer!"));
         List<Pessoa> pessoas = Arrays.asList(carlos, eduardo, camila, gabriel, outro);
         //*/
@@ -20,15 +20,11 @@ public class Main {
         Pessoa carlos = new Pessoa("Carlos", new LinguaPortugues());
         Pessoa eduardo = new Pessoa("Eduardo", new LinguaItaliano());
         Pessoa camila = new Pessoa("Camila", new LinguaIngles());
-        Pessoa gabriel = new Pessoa("Grabriel", new LinguaEspanhol());
+        Pessoa gabriel = new Pessoa("Gabriel", new LinguaEspanhol());
         List<Pessoa> pessoas = Arrays.asList(carlos, eduardo, camila, gabriel);
         //*/
 
-        pessoas.forEach( (p) -> {
-            System.out.print(p.getNome() + " diz: ");
-            p.getLingua().falarLingua();
-        });
-
+        pessoas.forEach( Pessoa::falar );
 
     }
 }

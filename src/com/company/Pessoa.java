@@ -21,4 +21,9 @@ public class Pessoa {
     public void setLingua(Lingua lingua) {
         this.lingua = lingua;
     }
+
+    public void falar(){
+        System.out.print(this.getNome() + " diz: ");
+        this.getLingua().falarLingua();
+    }
 }
