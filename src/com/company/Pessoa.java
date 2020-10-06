@@ -2,8 +2,8 @@ package com.company;
 
 public class Pessoa {
 
-    final String nome;
-    Lingua lingua;
+    private final String nome;
+    private Lingua lingua;
 
     Pessoa(String nome, Lingua lingua){
         this.nome = nome;
@@ -14,16 +14,12 @@ public class Pessoa {
         return nome;
     }
 
-    public Lingua getLingua() {
-        return lingua;
-    }
-
     public void setLingua(Lingua lingua) {
         this.lingua = lingua;
     }
 
     public void falar(){
-        System.out.print(this.getNome() + " diz: ");
-        this.getLingua().falarLingua();
+        System.out.print(this.nome + " diz: ");
+        this.lingua.falarLingua();
     }
 }

@@ -16,15 +16,25 @@ public class Main {
         List<Pessoa> pessoas = Arrays.asList(carlos, eduardo, camila, gabriel, outro);
         //*/
 
-        //*//
+
         Pessoa carlos = new Pessoa("Carlos", new LinguaPortugues());
         Pessoa eduardo = new Pessoa("Eduardo", new LinguaItaliano());
         Pessoa camila = new Pessoa("Camila", new LinguaIngles());
         Pessoa gabriel = new Pessoa("Gabriel", new LinguaEspanhol());
         List<Pessoa> pessoas = Arrays.asList(carlos, eduardo, camila, gabriel);
-        //*/
 
         pessoas.forEach( Pessoa::falar );
+
+        System.out.println("\n\nPessoas falando outra lingua:\n");
+
+        carlos.setLingua(new LinguaEspanhol());
+        eduardo.setLingua(new LinguaIngles());
+        camila.setLingua(new LinguaItaliano());
+        gabriel.setLingua(new LinguaPortugues());
+        List<Pessoa> pessoasFalandoOutraLingua = Arrays.asList(carlos, eduardo, camila, gabriel);
+
+        pessoasFalandoOutraLingua.forEach( Pessoa::falar );
+
 
     }
 }
