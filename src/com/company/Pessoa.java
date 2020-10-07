@@ -19,7 +19,10 @@ public class Pessoa {
     }
 
     public void falar(){
-        System.out.print(this.nome + " diz: ");
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.nome).append(" diz: ");
+
+        System.out.print(sb.toString());
         this.lingua.falarLingua();
     }
 }
