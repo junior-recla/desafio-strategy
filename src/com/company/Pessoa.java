@@ -4,10 +4,12 @@ public class Pessoa {
 
     private final String nome;
     private Lingua lingua;
+    private final StringBuilder sbFalar = new StringBuilder();
 
     Pessoa(String nome, Lingua lingua){
         this.nome = nome;
         this.lingua = lingua;
+        sbFalar.append(nome).append(" diz: ");
     }
 
     public String getNome() {
@@ -19,10 +21,7 @@ public class Pessoa {
     }
 
     public void falar(){
-        StringBuilder sb = new StringBuilder();
-        sb.append(this.nome).append(" diz: ");
-
-        System.out.print(sb.toString());
+        System.out.print(sbFalar.toString());
         this.lingua.falarLingua();
     }
 }
